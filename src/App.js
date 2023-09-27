@@ -10,7 +10,7 @@ function App() {
 
   const fetchData = () => {
     axios
-    .get(`${process.env.REACT_APP_API}/blogs`)
+    .get(`${process.env.API}/blogs`)
     .then(Response=>{
       setBlogs(Response.data)
     })
