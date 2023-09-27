@@ -3,13 +3,14 @@ import axios from "axios";
 import {useState,useEffect} from "react";
 import {Link} from "react-router-dom";
 import Swal from "sweetalert2"
+require("dotenv").config()
 
 function App() {
   const [blogs,setBlogs] = useState([])
 
   const fetchData = () => {
     axios
-    .get(`$https://bp-mongo-api.cyclic.cloud/api/blogs`)
+    .get(`${process.env.REACT_APP_API}/blogs`)
     .then(Response=>{
       setBlogs(Response.data)
     })
