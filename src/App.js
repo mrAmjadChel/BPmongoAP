@@ -9,7 +9,7 @@ function App() {
 
   const fetchData = () => {
     axios
-    .get(`${process.env.REACT_APP_API}/blogs`)
+    .get(`$https://bp-mongo-api.cyclic.cloud/api/blogs`)
     .then(Response=>{
       setBlogs(Response.data)
     })
